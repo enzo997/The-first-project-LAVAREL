@@ -9,3 +9,10 @@ câu lệnh tạo table database ở migration cho việc đăng nhập
 
 câu lệnh thực thi table đẩy lên database mysql:
 ---> php artisan migrate   ---> enter
+
+các câu lệnh truy xuất database php:
+ // $result=DB::table('tbl_admin')->get()->toArray();
+// $result=DB::table('tbl_admin')->get('admin_email');
+echo '<pre>';
+print_r($result);
+echo '</pre>';
