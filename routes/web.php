@@ -17,3 +17,4 @@ Route::get('/home-page','Homecontroller@index');
 //Server admin
 Route::get('/admin','AdminController@index');
 Route::get('/dashboard','AdminController@show_Dashboard');
+Route::post('/admin-dashboard','AdminController@dashboard');
