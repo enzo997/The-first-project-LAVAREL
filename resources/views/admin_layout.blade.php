@@ -92,9 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Products</span>
                     </a>
                     <ul class="sub">
-						<li><a href="typography.html">All Product</a></li>
-                        <li><a href="grids.html">Add New Product</a></li>
-						<li><a href="glyphicon.html">Categories</a></li>
+						<li><a href="{{URL::to('/all-category')}}">All Product</a></li>
+                        <li><a href="{{URL::to('/add-category')}}">Add New Product</a></li>
                     </ul>
                 </li>
                 <!-- <li>
@@ -178,19 +177,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--sidebar end-->
 <!--main content start-->
 <section id="main-content">
-	<section class="wrapper" style="height:100vh">
+	<section class="wrapper">
         @yield('admin_content')
     </section>
- <!-- footer -->
-		  <div class="footer">
-			<div class="wthree-copyright">
-			  <p>© 2020 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-			</div>
-		  </div>
+    <div class="footer">
+    <div class="wthree-copyright">
+        <p>© 2020 Visitors. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+    </div>
+</div>
   <!-- / footer -->
 </section>
 <!--main content end-->
+<!-- footer -->
+
 </section>
+
 <script src="{{asset('public/backend/js/bootstrap.js')}}"></script>
 <script src="{{asset('public/backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
 <script src="{{asset('public/backend/js/scripts.js')}}"></script>

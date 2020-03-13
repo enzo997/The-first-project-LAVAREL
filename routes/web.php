@@ -19,3 +19,8 @@ Route::get('/admin','AdminController@index');//layout-login
 Route::get('/dashboard','AdminController@show_Dashboard');//layout_dashboard
 Route::get('/logout','AdminController@logout');//logout
 Route::post('/admin-dashboard','AdminController@dashboard');//phương thức checkin của form
+
+//Category Product
+Route::get('/all-category','CategoryProduct@all_category');
+Route::get('/add-category','CategoryProduct@add_category');
+
