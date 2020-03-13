@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>Layout Dashboard</title>
+<title>Lavarel Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -50,13 +50,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                 <img alt="" src="{{('public/backend/images/2.png')}}">
-                <span class="username">John Doe</span>
+                <span class="username">
+                <?php
+                    $name = Session::get('admin_name');
+                    if($name){
+                        echo $name;
+                    }
+                ?>
+                </span>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->

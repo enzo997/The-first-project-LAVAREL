@@ -15,6 +15,7 @@ Route::get('/','Homecontroller@index');
 Route::get('/home-page','Homecontroller@index');
 
 //Server admin
-Route::get('/admin','AdminController@index');
-Route::get('/dashboard','AdminController@show_Dashboard');
-Route::post('/admin-dashboard','AdminController@dashboard');
+Route::get('/admin','AdminController@index');//layout-login
+Route::get('/dashboard','AdminController@show_Dashboard');//layout_dashboard
+Route::get('/logout','AdminController@logout');//logout
+Route::post('/admin-dashboard','AdminController@dashboard');//phương thức checkin của form
