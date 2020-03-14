@@ -3,7 +3,7 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Responsive Table
+      ALL PRODUCT
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">
@@ -36,7 +36,7 @@
               </label>
             </th>
             <th>Name's Product</th>
-            <th>Display</th>
+            <th>Status</th>
             <th>Date</th>
             <th style="width:30px;"></th>
           </tr>

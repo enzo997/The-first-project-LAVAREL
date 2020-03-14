@@ -23,4 +23,5 @@ Route::post('/admin-dashboard','AdminController@dashboard');//phương thức ch
 //Category Product
 Route::get('/all-category','CategoryProduct@all_category');
 Route::get('/add-category','CategoryProduct@add_category');
+Route::post('/save-category-product','CategoryProduct@save_category_product');
 
