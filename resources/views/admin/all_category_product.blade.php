@@ -28,6 +28,13 @@
     </div>
     <div class="table-responsive">
       <table class="table table-striped b-t b-light">
+        <?php
+            $message = Session::get('message');
+            if($message){
+                echo $message;
+                Session::put('message',null);
+            }
+        ?>
         <thead>
           <tr>
             <th style="width:20px;">
@@ -47,10 +54,16 @@
                 <td>{{ $cate_prod->category_name }}</td>
                 <td><span class="text-ellipsis">
                   <?php
-                    if($cate_prod->category_status === 1)
-                      echo 'Hidden';
-                    else
-                      echo 'Show';
+                    if($cate_prod->category_status === 1){
+                      ?>
+                        <a href="{{URL::to('/active-category-product/'.$cate_prod->category_id)}}" class="fa fa-thumbs-up" style="color: green; font-size: 18px"></a>
+                      <?php
+                    }
+                    else{
+                      ?>
+                        <a href="{{URL::to('/unactive-category-product/'.$cate_prod->category_id)}}" class="fa fa-thumbs-down" style="color: red; font-size: 18px"></a>
+                      <?php
+                    }
                   ?>
                 </span></td>
                 <td>
