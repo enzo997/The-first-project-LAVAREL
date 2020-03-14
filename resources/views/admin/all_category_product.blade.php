@@ -37,24 +37,31 @@
             </th>
             <th>Name's Product</th>
             <th>Status</th>
-            <th>Date</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>Idrawfast prototype design prototype design prototype design prototype design prototype design</td>
-            <td><span class="text-ellipsis">Hidden/Show</span></td>
-            <td><span class="text-ellipsis">14/3/2020</span></td>
-            <td>
-              <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
-            </td>
-          </tr>
+            @foreach ($all_category_product as $key => $cate_prod)
+                <tr>
+                <td><label class="i-checks m-b-none"><input type="checkbox" name="all"><i></i></label></td>
+                <td>{{ $cate_prod->category_name }}</td>
+                <td><span class="text-ellipsis">
+                  <?php
+                    if($cate_prod->category_status === 1)
+                      echo 'Hidden';
+                    else
+                      echo 'Show';
+                  ?>
+                </span></td>
+                <td>
+                  <a href="" class="active" ui-toggle-class=""><i class="fa fa-check text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
+                </td>
+              </tr>
+            @endforeach
         </tbody>
       </table>
     </div>
-    <footer class="panel-footer">
+    <!-- <footer class="panel-footer">
       <div class="row">
         
         <div class="col-sm-5 text-center">
@@ -71,7 +78,7 @@
           </ul>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </div>
 @endsection

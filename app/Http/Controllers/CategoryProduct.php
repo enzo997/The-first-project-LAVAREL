@@ -10,11 +10,13 @@ use Illuminate\support\Facades\Redirect;
 class CategoryProduct extends Controller
 {
     public function all_category(){
-        return view('admin.all-category-product');
 
+        $all_category_product = DB::table('tbl_category_product')->get();
+        $maneger_category_product = view('admin.all_category_product')->with('all_category_product',$all_category_product);
+        return view('admin_layout')->with('admin.all_category_product',$maneger_category_product);
     }
     public function add_category(){
-        return view('admin.add-category-product');
+        return view('admin.add_category_product');
     }
     public function save_category_product(Request $request){
 
