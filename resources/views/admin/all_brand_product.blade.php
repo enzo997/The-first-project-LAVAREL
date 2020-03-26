@@ -3,7 +3,7 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      ALL PRODUCT
+      ALL BRAND PRODUCT
     </div>
     <div class="row w3-res-tb">
       <div class="col-sm-5 m-b-xs">
@@ -48,27 +48,27 @@
           </tr>
         </thead>
         <tbody>
-            @foreach ($all_category_product as $key => $cate_prod)
+            @foreach ($all_brand_product  as $key => $brand_prod)
                 <tr>
                 <td><label class="i-checks m-b-none"><input type="checkbox" name="all"><i></i></label></td>
-                <td>{{ $cate_prod->category_name }}</td>
+                <td>{{ $brand_prod->brand_name }}</td>
                 <td><span class="text-ellipsis">
                   <?php
-                    if($cate_prod->category_status === 1){
+                    if($brand_prod->brand_status === 1){
                       ?>
-                        <a href="{{URL::to('/active-category-product/'.$cate_prod->category_id)}}" class="fa fa-thumbs-up" style="color: green; font-size: 18px"></a>
+                        <a href="{{URL::to('/active-brand-product/'.$brand_prod->brand_id)}}" class="fa fa-thumbs-up" style="color: green; font-size: 18px"></a>
                       <?php
                     }
                     else{
                       ?>
-                        <a href="{{URL::to('/unactive-category-product/'.$cate_prod->category_id)}}" class="fa fa-thumbs-down" style="color: red; font-size: 18px"></a>
+                        <a href="{{URL::to('/unactive-brand-product/'.$brand_prod->brand_id)}}" class="fa fa-thumbs-down" style="color: red; font-size: 18px"></a>
                       <?php
                     }
                   ?>
                 </span></td>
                 <td>
-                  <a href="{{URL::to('/edit-category-product/'.$cate_prod->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fas fa-edit"></i></a>
-                  <a onclick="return confirm('Are you sure to delete ?')" href="{{URL::to('/delete-category-product/'.$cate_prod->category_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+                  <a href="{{URL::to('/edit-brand-product/'.$brand_prod->brand_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fas fa-edit"></i></a>
+                  <a onclick="return confirm('Are you sure to delete ?')" href="{{URL::to('/delete-brand-product/'.$brand_prod->brand_id)}}" class="active styling-edit" ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
                 </td>
               </tr>
             @endforeach

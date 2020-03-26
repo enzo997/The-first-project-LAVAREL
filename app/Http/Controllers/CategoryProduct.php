@@ -39,13 +39,33 @@ class CategoryProduct extends Controller
     public function active_category_product($category_product_id){// sau khi click sẽ unactive
         $arr = DB::table('tbl_category_product')->get('category_name');
         DB::table('tbl_category_product')->where('category_id',$category_product_id)->update(['category_status' => 0]);
-        Session::put('message','<span style="color: red; font-size:14px;display:flex;justify-content: center;">Unctive Product sucssecfully !!!</span>');
+        Session::put('message','<span style="color:#ff8f6b; font-size:14px;display:flex;justify-content: center;">Unctive Product Sucssecfully !!!</span>');
         return Redirect::to('all-category');
     }
     public function unactive_category_product($category_product_id){//sau khi click sẽ active
         $arr = DB::table('tbl_category_product')->get('category_name');
         DB::table('tbl_category_product')->where('category_id',$category_product_id)->update(['category_status' => 1]);
-        Session::put('message','<span style="color:green; font-size:14px;display:flex;justify-content: center;">Active Product sucssecfully !!!</span>');
+        Session::put('message','<span style="color:green; font-size:14px;display:flex;justify-content: center;">Active Product Sucssecfully !!!</span>');
+        return Redirect::to('all-category');
+    }
+    public function edit_category_product($category_product_id){
+        $edit_category_product = DB::table('tbl_category_product')->where('category_id',$category_product_id)->get();
+        $maneger_category_product = view('admin.edit_category_product')->with('edit_category_product',$edit_category_product);
+        return view('admin_layout')->with('admin.edit_category_product',$maneger_category_product);
+    }
+    public function update_category_product(Request $request, $category_product_id){
+
+        $data = array();
+        $data['category_name'] = $request->category_product_name;
+        $data['category_desc'] = $request->category_product_desc;
+
+        DB::table('tbl_category_product')->where('category_id',$category_product_id)->update($data);
+        Session::put('message','<span style="color:green; font-size:14px;display:flex;justify-content: center;">Update Product Sucssecfully !!!</span>');
+        return Redirect::to('all-category');
+    }
+    public function delete_category_product($category_product_id){
+        DB::table('tbl_category_product')->where('category_id',$category_product_id)->delete();
+        Session::put('message','<span style="color:green; font-size:14px;display:flex;justify-content: center;">Delete Product Sucssecfully !!!</span>');
         return Redirect::to('all-category');
     }
 }

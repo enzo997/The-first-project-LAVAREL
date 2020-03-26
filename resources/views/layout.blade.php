@@ -9,6 +9,7 @@
     <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/all-fontawesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/frontend/fonts/fontawesome/css/all.min.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/price-range.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
@@ -41,11 +42,11 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -374,10 +375,10 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="{{asset('public/frontend/images/iframe1.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="far fa-play-circle"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -389,10 +390,10 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="{{('public/frontend/images/iframe2.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="far fa-play-circle"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -404,10 +405,10 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="{{('public/frontend/images/iframe3.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="far fa-play-circle"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -419,10 +420,10 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="{{asset('public/frontend/images/iframe4.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
+										<i class="far fa-play-circle"></i>
 									</div>
 								</a>
 								<p>Circle of Hands</p>
@@ -432,7 +433,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="images/home/map.png" alt="" />
+							<img src="{{asset('public/frontend/images/map.png')}}" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
