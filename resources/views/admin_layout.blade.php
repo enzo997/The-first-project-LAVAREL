@@ -91,11 +91,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Products</span>
+                        <span>Products category</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/all-category')}}">All Product</a></li>
-                        <li><a href="{{URL::to('/add-category')}}">Add New Product</a></li>
+						<li><a href="{{URL::to('/all-category')}}">All Product's category</a></li>
+                        <li><a href="{{URL::to('/add-category')}}">Add New Product's category</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -106,6 +106,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{{URL::to('/all-brand')}}">All Product brand</a></li>
                         <li><a href="{{URL::to('/add-brand')}}">Add New Product brand</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fab fa-product-hunt"></i>
+                        <span>Products</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/all-product')}}">All Product</a></li>
+                        <li><a href="{{URL::to('/add-product')}}">Add New Product</a></li>
                     </ul>
                 </li>
             </ul>           
